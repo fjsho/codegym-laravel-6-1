@@ -11,6 +11,10 @@
 |
 */
 
+use Illuminate\Routing\Route;
+//「/」に対するルート
 Route::get('/', function () {
     return view('welcome');
 });
+//「/hello」に対するルート
+Route::get('hello','HelloController@index');
