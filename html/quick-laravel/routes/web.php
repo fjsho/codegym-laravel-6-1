@@ -29,3 +29,5 @@ Route::get('hello','HelloController@index');
 
 //「/hello/view」に対するルート
 Route::get('hello/view', 'HelloController@view');
+
+Route::get('hello/list','HelloController@list');
