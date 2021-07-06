@@ -14,7 +14,7 @@ return [
     | you may use many connections at once using the Database library.
     |
     */
-
+    //c.既定の接続
     'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
@@ -32,7 +32,7 @@ return [
     | choice installed on your machine before you begin development.
     |
     */
-
+    //a.データベースごとの設定
     'connections' => [
 
         'sqlite' => [
@@ -42,15 +42,15 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
-
+        //b.mySql(MariaDB)の設定
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'quick_laravel'),
+            'username' => env('DB_USERNAME', 'quickusr'),
+            'password' => env('DB_PASSWORD', 'quickpass'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
