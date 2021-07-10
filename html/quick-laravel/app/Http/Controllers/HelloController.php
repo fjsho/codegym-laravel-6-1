@@ -34,5 +34,14 @@ class HelloController extends Controller
         ];
         return view('hello.list',$data);
     }
+
+    public function list2()
+    {
+        //booksデーブルから全行を取得
+        $data = [
+            'records' => Book::all()
+        ];
+        return view('hello.list2',$data);
+    }
 }
 
